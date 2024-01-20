@@ -15,8 +15,8 @@ import errorHandler from "./middleware/errorHandler.js";
 import userRouter from "./userController/routes/index.js";
 import adminRouter from "./adminController/routes/index.js"
 
-mongoose
-  .connect(DB_KEY)
+//database connection
+mongoose.connect(DB_KEY)
   .then(() => {
     console.log("DB Connected...");
   })
