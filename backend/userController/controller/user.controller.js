@@ -150,8 +150,8 @@ const userController = {
             }
 
             // logic to update user's credit score
-            
             if (new Date() <= newDate ) {
+                
                 console.log("inc")
                 await userModel.updateOne({ _id: userId }, { $inc: { creditScore: incrementScore } })
             }
