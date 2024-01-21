@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../../Assests/animations/107043-success.json";
+import animationData from "../../../assets/animations/loader.json";
 
 const Loader = () => {
   const defaultOptions = {

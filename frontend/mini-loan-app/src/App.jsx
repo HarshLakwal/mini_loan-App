@@ -32,7 +32,6 @@ const ProtectedAdminRoute = ({ element }) => {
 const ProtectedUserRoute = ({ element }) => {
   const isUser = () => {
     const role = localStorage.getItem('userRole')
-    console.log(role)
     if (role === "user") {
       return true;
     }

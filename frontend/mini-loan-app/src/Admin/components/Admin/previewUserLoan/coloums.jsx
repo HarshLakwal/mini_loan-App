@@ -76,7 +76,7 @@ export const columns = (userId) => [
   {
     field: " ",
     flex: 0.4,
-    minWidth: 100,
+    minWidth: 150,
     headerName: "Action",
     sortable: false,
     renderCell: (params) => {

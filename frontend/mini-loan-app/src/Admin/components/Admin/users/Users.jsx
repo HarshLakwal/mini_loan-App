@@ -20,7 +20,6 @@ const useStyles = makeStyles({
         },
     },
 });
-console.log(Admintoken)
 const getUsers = async () => {
     const res = await axios.get(`${adminServerURl}/get-users`, {
         headers: {

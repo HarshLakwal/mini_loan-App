@@ -5,12 +5,12 @@ import { token } from '../../../../serverURL'
 import UserLoanPage from '../user/UserLoanPage'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Sheared/Navbar'
+import Loader from '../../components/Sheared/Loader.jsx'
 
 const UserDashboardPage = () => {
   const dispatch = useDispatch()
 
-  const user = useSelector((state) => state.user.user)
-  console.log(token)
+  const user = useSelector((state) => state.user)
   useEffect(() => {
     if(!token){
       window.location.reload()
@@ -21,9 +21,9 @@ const UserDashboardPage = () => {
   return (
     <>
 
-      <div class="flex-grow text-gray-800">
+      <div class="flex-grow  text-gray-800">
         <Navbar />
-        <main class="p-6 sm:p-10 h-[90vh] space-y-6">
+        <main class="p-6 sm:p-10 min-h-[90vh] space-y-6">
           <div class="flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between">
             <div class="mr-6">
               <h1 class="text-4xl font-semibold mb-2">Dashboard</h1>
@@ -38,7 +38,7 @@ const UserDashboardPage = () => {
                 </svg>
               </div>
               <div >
-                <span class="block text-2xl font-bold">{user?.creditScore}</span>
+                <span class="block text-2xl font-bold">{user.loading ? <Loader/> : user?.user?.creditScore}</span>
                 <span class="block text-gray-500">Credit Score</span>
               </div>
             </div>
