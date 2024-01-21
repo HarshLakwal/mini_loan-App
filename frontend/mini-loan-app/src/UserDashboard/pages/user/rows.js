@@ -1,6 +1,6 @@
 import moment from 'moment';
 export const rows = (data) => {
-
+console.log(data)
   const row = [];
   // let userReferralCount 
   // data?.usersReferralCounts.map((count, index)=> {

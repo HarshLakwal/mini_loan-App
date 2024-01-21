@@ -61,7 +61,7 @@ const PreviewTerm = () => {
                             <h1 class="text-3xl font-semibold mb-2">My weekly terms</h1>
                         </div>
                         <div>
-                            <h1 class=" flex items-center text-3xl font-semibold mb-2 ">Laon: {term?.isLoading ? <Loader/> : term?.isPaid ? <span className='bg-green-300 p-2 rounded'>Paid</span> : <span className='bg-red-300 p-2 rounded'>Unpaid</span>}</h1>
+                            <h1 class=" flex items-center text-3xl font-semibold mb-2 ">Laon: {term?.isLoading ? <Loader/> : term?.message?.isPaid ? <span className='bg-green-300 p-2 rounded'>Paid</span> : <span className='bg-red-300 p-2 rounded'>Unpaid</span>}</h1>
                         </div>
                     </div>
                     {
